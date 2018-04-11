@@ -1,0 +1,35 @@
+
+.Button:hover {
+	-fx-background-color: #ff00f6;
+}
+
+.Button {
+	-fx-background-color: #84207c;
+	-fx-background-radius: 2em;
+	-fx-text-fill: white;
+}
+
+.Button3 {
+	-fx-background-color: transparent;
+	-fx-border-color: #84207c;
+	-fx-border-radius: 2em;
+	-fx-text-fill: #84207c;
+}
+
+
+.Button2:hover {
+	-fx-background-color: #D5D3D6;
+}
+
+.Button2 {
+	-fx-background-color: transparent;
+}
+.toggle-button:selected {
+	-fx-graphic: url('file:///C:/Users/HP/Desktop/FinalProject/FinalProject/resources/images/cinema-chair1.png');
+	
+}
+.toggle-button {
+	-fx-graphic: url('file:///C:/Users/HP/Desktop/FinalProject/FinalProject/resources/images/cinema-chair.png');
+	-fx-background-color: transparent;
+}
+

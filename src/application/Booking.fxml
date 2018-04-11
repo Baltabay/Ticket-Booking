@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookingController">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: #84207c;">
+         <children>
+            <Label layoutX="14.0" layoutY="5.0" prefHeight="0.0" prefWidth="133.0" text="Bookings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="1092.0" layoutY="8.0" mnemonicParsing="false" onAction="#minimize" prefHeight="34.0" prefWidth="38.0" styleClass="Button2" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/shopping-cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="1148.0" layoutY="10.0" mnemonicParsing="false" onAction="#exit" prefHeight="6.0" prefWidth="6.0" styleClass="Button2" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/close-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="50.0" prefHeight="750.0" prefWidth="300.0">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="47.0" layoutY="655.0" onAction="#back" prefHeight="50.0" prefWidth="206.0" ripplerFill="#ffffff00" style="-fx-border-color: #84207c; -fx-border-radius: 2em;" text="Back" textFill="#84207c">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/reply.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="127.0" layoutY="44.0" prefHeight="34.0" prefWidth="49.0" text="Date">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="125.0" layoutY="190.0" prefHeight="34.0" prefWidth="49.0" text="Film">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="125.0" layoutY="358.0" prefHeight="34.0" prefWidth="60.0" text="Time">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="filmsBox" focusColor="#84207c" layoutX="34.0" layoutY="236.0" onAction="#film" prefHeight="34.0" prefWidth="232.0" promptText="Film" unFocusColor="#84207c" />
+            <JFXDatePicker fx:id="datePicker" defaultColor="#84207c" layoutX="34.0" layoutY="78.0" onAction="#date" prefWidth="232.0" />
+            <JFXComboBox fx:id="timesBox" focusColor="#84207c" layoutX="34.0" layoutY="422.0" onAction="#checkTickets" prefHeight="34.0" prefWidth="232.0" promptText="Time" unFocusColor="#84207c" />
+            <JFXButton buttonType="RAISED" layoutX="46.0" layoutY="591.0" onAction="#book" prefHeight="50.0" prefWidth="206.0" ripplerFill="#ffffff00" style="-fx-border-color: #84207c; -fx-border-radius: 2em;" text="Book" textFill="#84207c">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/shopping-cart%20(3).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="300.0" layoutY="50.0" orientation="VERTICAL" prefHeight="750.0" />
+      <AnchorPane layoutX="300.0" layoutY="50.0" prefHeight="750.0" prefWidth="900.0">
+         <children>
+            <GridPane fx:id="cinemaHall" hgap="10.0" layoutX="187.0" layoutY="102.0" prefHeight="294.0" prefWidth="504.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane fx:id="cinemaHall1" hgap="10.0" layoutX="137.0" layoutY="102.0" prefHeight="294.0" prefWidth="50.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="20.0" prefWidth="50.0" text="Row 6" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="60.0" prefHeight="20.0" prefWidth="50.0" text="Row 5" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="60.0" prefHeight="20.0" prefWidth="50.0" text="Row 1" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="20.0" prefWidth="50.0" text="Row 2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="20.0" prefWidth="50.0" text="Row 3" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="20.0" prefWidth="50.0" text="Row 4" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="50.0" text="Row 7">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="cinemaHall2" hgap="10.0" layoutX="187.0" layoutY="70.0" prefHeight="32.0" prefWidth="504.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="18.0" prefWidth="0.0" text="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="16.0" prefHeight="18.0" prefWidth="0.0" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="18.0" prefWidth="0.0" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="16.0" prefHeight="18.0" prefWidth="0.0" text="4" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="16.0" prefHeight="18.0" prefWidth="0.0" text="5" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="16.0" prefHeight="18.0" prefWidth="0.0" text="6" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="16.0" prefHeight="20.0" prefWidth="17.0" text="12" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="20.0" prefWidth="17.0" text="11" GridPane.columnIndex="10" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="20.0" prefWidth="17.0" text="10" GridPane.columnIndex="9" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="18.0" prefWidth="0.0" text="9" GridPane.columnIndex="8" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="18.0" prefWidth="0.0" text="8" GridPane.columnIndex="7" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="18.0" prefWidth="0.0" text="7" GridPane.columnIndex="6" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="32.0" layoutX="294.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+            <Label layoutX="418.0" layoutY="460.0" text="Scene">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="268.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/cinema-chair64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="418.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/cinema-chair264.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="562.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/cinema-chair164.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="267.0" layoutY="637.0" prefHeight="22.0" prefWidth="80.0" text="Available">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="423.0" layoutY="637.0" prefHeight="22.0" prefWidth="54.0" text="Booked">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="564.0" layoutY="637.0" prefHeight="22.0" prefWidth="60.0" text="Selected">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrong" layoutX="27.0" layoutY="23.0" opacity="0.0" prefHeight="27.0" prefWidth="159.0">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

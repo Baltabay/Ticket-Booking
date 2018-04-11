@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MoviesMenuController">
+   <children>
+      <AnchorPane layoutX="142.0" layoutY="1.0" prefHeight="789.0" prefWidth="1042.0">
+         <children>
+            <Button layoutX="990.0" layoutY="19.0" mnemonicParsing="false" onAction="#exit" prefHeight="6.0" prefWidth="6.0" styleClass="Button2" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/close-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="label" layoutX="20.0" layoutY="11.0" prefHeight="38.0" prefWidth="124.0" text="Movies">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutY="71.0" prefHeight="828.0" prefWidth="1042.0">
+               <content>
+                  <VBox fx:id="vbox" prefHeight="816.0" prefWidth="1042.0" />
+               </content>
+            </ScrollPane>
+            <Button layoutX="930.0" layoutY="16.0" mnemonicParsing="false" onAction="#minimize" prefHeight="34.0" prefWidth="38.0" styleClass="Button2" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/shopping-cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="draggableNode" prefHeight="900.0" prefWidth="143.0" style="-fx-background-color: #84207c;">
+         <children>
+            <Button layoutY="174.0" mnemonicParsing="false" onAction="#movies" prefHeight="61.0" prefWidth="143.0" styleClass="Button2" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/film-reel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutY="419.0" mnemonicParsing="false" onAction="#reservedTickets" prefHeight="62.0" prefWidth="143.0" styleClass="Button2" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/shopping-cart%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutY="657.0" mnemonicParsing="false" onAction="#signOut" prefHeight="63.0" prefWidth="143.0" styleClass="Button2" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/images/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
